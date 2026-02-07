@@ -3,6 +3,6 @@
 	"IblisIpAddress": "127.0.0.1",
 	"port": "8005",
 	"path": "/api/v1/interfacer",
-	"username": "admini",
-	"password": "pass"
+	"username": "administrator",
+	"password": "kchlims"
 }
