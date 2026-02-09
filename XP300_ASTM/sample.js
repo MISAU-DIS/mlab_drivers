@@ -21,7 +21,7 @@ const sampleMessages = {
     sample1: [
         `H|\\^&|||XP-300^00-07^^^^A1573^AP807129||||||||E1394-97`,
         `P|1`,
-        `O|1||^^     2300013216^B|^^^^WBC\\^^^^RBC\\^^^^HGB\\^^^^HCT\\^^^^MCV\\^^^^MCH\\^^^^MCHC\\^^^^PLT\\^^^^LYM%\\^^^^MXD%\\^^^^NEUT%\\^^^^LYM#\\^^^^MXD#\\^^^^NEUT#\\^^^^RDW-SD\\^^^^RDW-CV\\^^^^PDW\\^^^^MPV\\^^^^P-LCR\\^^^^PCT|||||||N||||||||||||||F`,
+        `O|1||^^     KCH2600000001^B|^^^^WBC\\^^^^RBC\\^^^^HGB\\^^^^HCT\\^^^^MCV\\^^^^MCH\\^^^^MCHC\\^^^^PLT\\^^^^LYM%\\^^^^MXD%\\^^^^NEUT%\\^^^^LYM#\\^^^^MXD#\\^^^^NEUT#\\^^^^RDW-SD\\^^^^RDW-CV\\^^^^PDW\\^^^^MPV\\^^^^P-LCR\\^^^^PCT|||||||N||||||||||||||F`,
         `R|1|^^^^WBC^1|  4.8|10*3/uL||W||||WESLEY         ||20231115103722`,
         `R|2|^^^^RBC^1| 3.69|10*6/uL||L||||WESLEY         ||20231115103722`,
         `R|3|^^^^HGB^1| 11.8|g/dL||N||||WESLEY         ||20231115103722`,
@@ -148,17 +148,17 @@ async function connectAndSend() {
             await sendMessage(client, sampleMessages.sample1);
             await new Promise(resolve => setTimeout(resolve, 2000));
             
-            // Send Sample 2
-            console.log('\n=== Sending Sample 2 (Normal CBC) ===');
-            console.log('Specimen ID: 2300013217');
-            await sendMessage(client, sampleMessages.sample2);
-            await new Promise(resolve => setTimeout(resolve, 2000));
+            // // Send Sample 2
+            // console.log('\n=== Sending Sample 2 (Normal CBC) ===');
+            // console.log('Specimen ID: 2300013217');
+            // await sendMessage(client, sampleMessages.sample2);
+            // await new Promise(resolve => setTimeout(resolve, 2000));
             
             // Send Sample 3
-            console.log('\n=== Sending Sample 3 (Elevated WBC) ===');
-            console.log('Specimen ID: 2300013218');
-            await sendMessage(client, sampleMessages.sample3);
-            await new Promise(resolve => setTimeout(resolve, 2000));
+            // console.log('\n=== Sending Sample 3 (Elevated WBC) ===');
+            // console.log('Specimen ID: 2300013218');
+            // await sendMessage(client, sampleMessages.sample3);
+            // await new Promise(resolve => setTimeout(resolve, 2000));
             
             console.log('\n=== All samples sent successfully ===');
             client.end();

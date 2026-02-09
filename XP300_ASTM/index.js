@@ -23,10 +23,11 @@ async function sendData(urls) {
   console.log("-- sending data to server --");
 
   const [getUrl, ...remainingUrls] = urls; // Destructure first URL
-  console.log(getUrl);
-
+  console.log("-- sending URL:", getUrl, " --");
+  
   try {
-      await axios.get(getUrl, {
+    axios.defaults.params = {};
+      const data =await axios.get(getUrl, {
           auth: {
               username: settings.username,
               password: settings.password
