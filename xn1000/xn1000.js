@@ -12,7 +12,6 @@ var line = "";
 var reading = false;
 var sampleResult = "D2U    XN-550^111340000000004000            18001389390101200395001190039400997003010030220297002104006240713400070000840021340006340072140000700000840142005100011500101002590015500612001350086500115000200003000000000000000000540005400000002020     0000";
 
-
 var line = "";
 var cur_pos;
 var urls = [];
@@ -26,8 +25,9 @@ function sendData(urls){
 		var url = encodeURI(urls[0].replace("+", "---"));
 		url = url.replace("---", "%2B");
 		urls.shift();
-		//console.log(url);
 		(new client(options_auth)).get(url, function (data) {
+			console.log("url sent:", url);
+			
 			if(urls.length > 0){
 				sendData(urls);
 			}
