@@ -91,5 +91,5 @@ const server = net.createServer((socket) => {
 });
 
 server.listen(config.port, config.ipAddress, () => {
-    console.log(`Started server on ${config.ipAddress}`);
+    console.log(`Started server on ${config.ipAddress} and ${config.port}`);
 });

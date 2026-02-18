@@ -1,6 +1,6 @@
 {
 	"protocol": "http",
-	"IblisIpAddress": "100.88.205.30",
+	"IblisIpAddress": "192.168.14.173",
 	"port": "8005",
 	"path": "/api/v1/interfacer",
 	"username": "administrator",
