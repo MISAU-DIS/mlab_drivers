@@ -9,8 +9,6 @@ var mapping = require(path.resolve(".", "config", "xnseries.json"));
 var client = require('node-rest-client').Client;
 var line = "";
 
-var reading = false;
-var sampleResult = "D2U    XN-550^111340000000004000            18001389390101200395001190039400997003010030220297002104006240713400070000840021340006340072140000700000840142005100011500101002590015500612001350086500115000200003000000000000000000540005400000002020     0000";
 
 var line = "";
 var cur_pos;
@@ -161,4 +159,6 @@ var server = net.createServer(function(socket) {
 	});
 });
 
-server.listen(settings.driverPort, settings.driverHost);
+server.listen(settings.driverPort, settings.driverHost, ()=>{
+	console.log("Server is listening on " + settings.driverHost + ":" + settings.driverPort);
+});
